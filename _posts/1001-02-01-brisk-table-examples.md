@@ -1,0 +1,4 @@
+---
+layout: post
+---
+<iframe width="1600" height="600" src="https://kupolua.github.io/brisk-table-complete-example-presentation/example-pages/data-remote-server.html" frameborder="0" allowfullscreen></iframe>
