@@ -70,6 +70,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript">
     function dataProviderFunction() {
@@ -133,6 +134,26 @@
 
 </script>
 
+<script type="text/javascript">
+    function ajaxDataProviderFunction(){
+        return $.ajax({
+            dataType: 'json',
+            url: 'https://raw.githubusercontent.com/deepidea/brisk-table/master/json-server-db/db.json',
+            success: function(jsonData){
+                return jsonData;
+            }
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    function fetchSelectedRows(id){
+        let selectedRows = jsonTableFunctions.fetchSelectedRows(id);
+
+        alert('\'on row selected\' hook result:' + JSON.stringify(selectedRows, null, 4));
+    }
+</script>
+
 
 <script>
 
@@ -157,6 +178,7 @@
     });
 
 </script>
+
 
 <script src="https://raw.githubusercontent.com/deepidea/brisk-table/master/brisk-table.js"></script>
 
